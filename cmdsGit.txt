@@ -196,6 +196,7 @@ supprimer manuellement ou dans merge editor tout ce qu'on ne veut pas + git add/
 
 # GITHUB : GIT PULL + GIT PUSH
 
+TOUJOURS PULL AVANT DE PUSH
 Créer un repository sur Github puis :
 - git remote add origin git@github.com:SandraLamire-SensingVision/training-git.git
 - git branch -M main
