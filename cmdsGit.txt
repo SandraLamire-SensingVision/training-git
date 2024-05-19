@@ -13,7 +13,9 @@
 
 # PRENDRE UNE "PHOTO" DU PROJET : GIT ADD + GIT COMMIT
 
-- fichier à mettre dans git = à commiter : git add cmdGit.txt
+- fichier à mettre dans git = à commiter : git add cmdGit.txt 
+ou git . (pour tous les fichiers en respectant .gitignore)
+ou git * (pour tous les fichiers sans respecter .gitignore)
 
 - vérification des fichiers à commiter avec git status, affiche :
         On branch master
@@ -31,7 +33,7 @@
         create mode 100644 cmdGit.txt
 
 - après une modif, ajouter la avec :
-    git add nomDuFichierModifié ou git add * (pour tout le projet)git 
+    git add nomDuFichierModifié ou git add . (pour tout le projet)git 
     puis git commit -m "nomDuCommit"
 
 
@@ -210,7 +212,9 @@ Créer un repository sur Github puis :
     branch 'main' set up to track 'origin/main'.
 
 - git pull origin nomDeLaBranche (main ou autre) pour récupérer la version distante sur GitHub
-- git add/commit + git push nomDeLaBranche pour pousser les modifs locales dans Github
+
+- git add/commit + git push -u origin nomDeLaBranche pour pousser les modifs locales dans Github
+
 
 
 
