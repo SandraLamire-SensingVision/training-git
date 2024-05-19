@@ -52,7 +52,7 @@
             Début du projet Git
 
 
-# PLACER LE POINTEUR A UN COMMIT PRECEDENT : GIT CHECKOUT
+# VOIR LE CONTENU D'UN COMMIT PRECEDENT : GIT CHECKOUT
 
 checkout = extraction
 - git checkout identifiantDuCommit : 
