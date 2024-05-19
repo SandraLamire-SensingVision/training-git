@@ -114,6 +114,7 @@ si modifs à garder, créer une branche pour la fusionner plus tard
 
 - git branch pour liste des branches
 - git branch dev pour créer une branche dev
+- git branch -m nomDeLaBranche pour renommer la branche sur laquelle on est
 - git checkout nomDeLaBranche pour passer sur la branche voulue
     git checkout dev
         Switched to branch 'dev'
@@ -188,6 +189,14 @@ supprimer manuellement ou dans merge editor tout ce qu'on ne veut pas + git add/
 	hint: To abort and get back to the state before "git revert",
 	hint: run "git revert --abort".
 - git add/commit
+
+
+# GITHUB : GIT PUSH + GIT PULL
+Créer un repository sur Github puis :
+- git remote add origin git@github.com:SandraLamire-SensingVision/training-git.git
+- git branch -M main
+- git push -u origin main
+
 
 
 
