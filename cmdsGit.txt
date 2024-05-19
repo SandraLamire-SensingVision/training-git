@@ -14,8 +14,8 @@
 # PRENDRE UNE "PHOTO" DU PROJET : GIT ADD + GIT COMMIT
 
 - fichier à mettre dans git = à commiter : git add cmdGit.txt 
-ou git . (pour tous les fichiers en respectant .gitignore)
-ou git * (pour tous les fichiers sans respecter .gitignore)
+ou git add . (pour tous les fichiers en respectant .gitignore)
+ou git add * (pour tous les fichiers sans respecter .gitignore)
 
 - vérification des fichiers à commiter avec git status, affiche :
         On branch master
