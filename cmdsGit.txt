@@ -99,21 +99,21 @@ HEAD est un pointeur mobile qui peut pointer vers n’importe quel commit.
 si modifs sur le projets qu'on veux finalement ne pas garder
     git checkout master -f pour extraire la branche main et y revenir sans les dernières modifs locales non commitées
 
-pour conserver les modifications associées au HEAD détaché :
-    git switch -c ma-branche-temporaire pour créer une branche temporaire et s'y placer
-    git branch -D master pour supprimer master => Irréversible!
-    git branch -m master pour renommer la branche temporaire en master
+# BRANCHES
+git branch pour liste des branches
+git branch dev pour créer une branche dev
+git checkout nomDeLaBranche pour passer sur la branche voulue
+
+    git checkout dev
+        Switched to branch 'dev'
+        M       cmdGit.txt
+les commits futurs ne seront que sur cette branche
 
 
-RESOLUTION DE MERGE CONFLICT
-    git switch -c ma-branche-temporaire pour créer une branche temporaire
-    git switch master pour vérifier la branche principale
-    git merge ma-branche-temporaire pour fusionnez les modifs depuis la branche temporaire vers la branche principale
-    git switch master pour s'y replacer
 
-git checkout --ours cmdGit.txt pour garder la version principale de la branche master
-git checkout --theirs pour conserver la version de la branche temporaire
-puis git add * + git commit -m "résolution conflit"
+
+
+
 
 
 
