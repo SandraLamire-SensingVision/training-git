@@ -195,6 +195,7 @@ supprimer manuellement ou dans merge editor tout ce qu'on ne veut pas + git add/
 
 
 # CONSERVER LOCALEMENT LE MODIFS : GIT STASH + GIT POP
+
 Utile avant fusion ou pour travail sur plusieurs branches en même temps;
 Les stashes doivent être utilisés temporairement et appliqués ou supprimés dès que possible.
 
@@ -203,9 +204,11 @@ Les stashes doivent être utilisés temporairement et appliqués ou supprimés d
 
 On peut passer à une autre tâche/branche avec un espace de travail sans modif.
 
-- git pop applique le stash le plus récent, en restaurant les modifs enregistrées dans le stash.
+- git stash list pour lister les stashes
 
-- git stash list + git stash clear numéroDuStash pour supprimer un stash sans l'appliquer 
+- git stash pop numéroDuStash applique le stash le plus récent, en restaurant les modifs enregistrées dans le stash.
+
+- git stash clear numéroDuStash pour supprimer un stash sans l'appliquer 
 => Attention, définitif, mieux vaut faire git pop et l'examiner avant git reset --hard HEAD une fois sûr de ne pas utiliser les modifs de ce stash.
 
 
