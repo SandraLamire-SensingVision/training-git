@@ -157,21 +157,6 @@ les commits futurs ne seront que sur cette branche jusqu'à la fusion des branch
 - git branch -d dev pour supprimer la branche dev après
 
 
-# RESOLUTION DE CONFLIT
-
-- git branch futurConflit
-	faire un add+commit sur branche master
-- git checkout futurConflit
-	faire un add+commit sur branche futurConflit
-- git checkout master
-- git merge futurConflit renvoie :
-	Auto-merging cmdsGit.txt
-	CONFLICT (content): Merge conflict in cmdsGit.txt
-	Automatic merge failed; fix conflicts and then commit the result.
-
-supprimer tout ce qu'on ne veut pas + git add/commit
-- git log
-
 
 
 
