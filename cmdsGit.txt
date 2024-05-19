@@ -194,7 +194,7 @@ supprimer manuellement ou dans merge editor tout ce qu'on ne veut pas + git add/
 - git add/commit
 
 
-# GITHUB : GIT PUSH + GIT PULL
+# GITHUB : GIT PULL + GIT PUSH
 
 Créer un repository sur Github puis :
 - git remote add origin git@github.com:SandraLamire-SensingVision/training-git.git
@@ -222,7 +222,7 @@ Pour fusionner avec main, valider ce commit dans gitHub en cliquant sur :
 
 si des fichiers ont été modifiés en local entre temps
 
-- git add/commit + git push -u origin nomDeLaBranche pour pousser les modifs locales dans Github
+- git add/commit + git push -u origin nomDeLaBranche pour pousser les modifs locales sur la branche voulue dans Github
 
 
 
