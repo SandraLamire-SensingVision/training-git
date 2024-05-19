@@ -148,7 +148,7 @@ les commits futurs ne seront que sur cette branche jusqu'à la fusion des branch
 
 # FUSION DE BRANCHES : GIT MERGE
 
-- git checkout master poue se positionner sur la branche qui va recevoir les modifs finales
+- git checkout master pour se positionner sur la branche qui va recevoir les modifs finales
 - git merge dev pour passer les modifs de dev sur master
 	Updating daaec41..1c21ef3
 	Fast-forward
@@ -182,7 +182,7 @@ supprimer manuellement ou dans merge editor tout ce qu'on ne veut pas + git add/
 
 - git reset --hard HEAD supprime les modifs non commitées : retour au dernier commit
 
-- git revert identifiantDuCommit pour retourner à un commit précis + résolver les conflits si besoin 
+- git revert identifiantDuCommit pour retourner à un commit précis + résoudre les conflits si besoin 
 - git commit --abort si choix de conserver le code qui existait déjà dans le commit le plus récent : 
 	error: could not revert cc87665... Modif en conflit
 	hint: After resolving the conflicts, mark them with
@@ -191,7 +191,22 @@ supprimer manuellement ou dans merge editor tout ce qu'on ne veut pas + git add/
 	hint: You can instead skip this commit with "git revert --skip".
 	hint: To abort and get back to the state before "git revert",
 	hint: run "git revert --abort".
-- git add/commit
+- git add/commit  après reset ou revert
+
+
+# CONSERVER LOCALEMENT LE MODIFS : GIT STASH + GIT POP
+Utile avant fusion ou pour travail sur plusieurs branches en même temps;
+Les stashes doivent être utilisés temporairement et appliqués ou supprimés dès que possible.
+
+- git stash enregistre temporairement l'état actuel de l'espace de travail
+ et de l'index dans un "stash". = modifs non enregistrées mises de côté en lieu sûr, sans affecter la branche actuelle.
+
+On peut passer à une autre tâche/branche avec un espace de travail sans modif.
+
+- git pop applique le stash le plus récent, en restaurant les modifs enregistrées dans le stash.
+
+- git stash list + git stash clear numéroDuStash pour supprimer un stash sans l'appliquer 
+=> Attention, définitif, mieux vaut faire git pop et l'examiner avant git reset --hard HEAD une fois sûr de ne pas utiliser les modifs de ce stash.
 
 
 # GITHUB : GIT PULL + GIT PUSH
@@ -224,3 +239,4 @@ Pour fusionner avec main, valider ce commit dans gitHub en cliquant sur :
 si des fichiers ont été modifiés en local entre temps
 
 - git add/commit + git push -u origin nomDeLaBranche pour pousser les modifs locales sur la branche voulue dans Github
+
