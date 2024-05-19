@@ -1,13 +1,18 @@
 # INITIALISER : GIT INIT
+
 - git init initialise un dépôt vide en local = crée le dossier .git qui contient les modifs, affiche :
         Initialized empty Git repository in C:/Users/sandr/Desktop/training-git/.git/
 
+
 # CONFIGURER : GIT CONFIG
+
 - git config --global (pour tout le pc) ou git config (pour le projet) des nom utilisateur et email : 
     git config --global user.name "S. L."
     git config --global user.email "aaa@aa.fr"
 
+
 # PRENDRE UNE "PHOTO" DU PROJET : GIT ADD + GIT COMMIT
+
 - fichier à mettre dans git = à commiter : git add cmdGit.txt
 
 - vérification des fichiers à commiter avec git status, affiche :
@@ -25,12 +30,13 @@
         1 file changed, 31 insertions(+)
         create mode 100644 cmdGit.txt
 
- AJOUTER DES MODIFICATIONS
 - après une modif, ajouter la avec :
     git add nomDuFichierModifié ou git add * (pour tout le projet)git 
     puis git commit -m "nomDuCommit"
 
-LISTER LES COMMITS : GIT LOG
+
+# LISTER LES COMMITS : GIT LOG
+
 - git log affiche la liste des commits avec son identifiant + auteur + date + message
     :q pour ressortir de la liste
         commit b917a44b49f72adec111f834cdb7c34ebc0e5052 (HEAD -> master)
@@ -45,7 +51,9 @@ LISTER LES COMMITS : GIT LOG
 
             Début du projet Git
 
+
 # REVENIR A UN COMMIT PRECEDENT : GIT CHECKOUT
+
 checkout = extraction
 - git checkout identifiantDuCommit : 
     git log :
@@ -99,24 +107,26 @@ HEAD est un pointeur mobile qui peut pointer vers n’importe quel commit.
 si modifs sur le projets qu'on veux finalement ne pas garder
     git checkout master -f pour extraire la branche main et y revenir sans les dernières modifs locales non commitées
 
+
 # BRANCHES : GIT BRANCH + GIT CHECKOUT
-git branch pour liste des branches
-git branch dev pour créer une branche dev
-git checkout nomDeLaBranche pour passer sur la branche voulue
+
+- git branch pour liste des branches
+- git branch dev pour créer une branche dev
+- git checkout nomDeLaBranche pour passer sur la branche voulue
     git checkout dev
         Switched to branch 'dev'
         M       cmdGit.txt
 
 les commits futurs ne seront que sur cette branche jusqu'à la fusion des branches
 
-git checkout master + git log ne montrent pas les commits de la branche dev:
+- git checkout master + git log ne montrent pas les commits de la branche dev:
         commit daaec41a000b87c93e96faab994f5d33e02411d0 (HEAD -> master)
         Author: Sandra Lamiré <slamire@sensingvision.com>
         Date:   Sun May 19 14:11:10 2024 +0200
 
             Ajout d'un fichier
 
-git checkout dev + git log montrent les commits de la branche dev + la position du HEAD et de chaque branche:
+- git checkout dev + git log montrent les commits de la branche dev + la position du HEAD et de chaque branche:
         commit b2d007e5ef9e217859c5e58ab503760f7013d1bc (HEAD -> dev)
         Author: Sandra Lamiré <slamire@sensingvision.com>
         Date:   Sun May 19 14:22:24 2024 +0200
@@ -128,4 +138,29 @@ git checkout dev + git log montrent les commits de la branche dev + la position 
         Date:   Sun May 19 14:11:10 2024 +0200
 
             Ajout d'un fichier
+
+
+# FUSION DE BRANCHES : GIT MERGE
+
+- git checkout master poue se positionner sur la branche qui va recevoir les modifs finales
+- git merge dev pour passer les modifs de dev sur master
+	Updating daaec41..1c21ef3
+	Fast-forward
+ 	cmdsAconfirmer.txt        | 18 ++++++++++++++++++
+ 	cmdGit.txt => cmdsGit.txt | 45 +++++++++++++++++++++++++++------------------
+ 	new.txt                   |  0
+ 	3 files changed, 45 insertions(+), 18 deletions(-)
+ 	create mode 100644 cmdsAconfirmer.txt
+ 	rename cmdGit.txt => cmdsGit.txt (73%)
+ 	delete mode 100644 new.txt
+
+- git branch -d dev pour supprimer la branche dev après
+
+
+
+
+
+
+
+
 
