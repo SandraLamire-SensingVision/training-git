@@ -159,7 +159,7 @@ les commits futurs ne seront que sur cette branche jusqu'à la fusion des branch
 
 # RESOLUTION DE CONFLIT
 
-
+MERGE CONFLIT
 
 
 
