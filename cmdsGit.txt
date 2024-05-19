@@ -33,7 +33,7 @@ ou git add * (pour tous les fichiers sans respecter .gitignore)
         create mode 100644 cmdGit.txt
 
 - après une modif, ajouter la avec :
-    git add nomDuFichierModifié ou git add . (pour tout le projet)git 
+    git add nomDuFichierModifié ou git add . (pour tout le projet)
     puis git commit -m "nomDuCommit"
 
 
@@ -196,6 +196,7 @@ supprimer manuellement ou dans merge editor tout ce qu'on ne veut pas + git add/
 
 # GITHUB : GIT PULL + GIT PUSH
 
+TOUJOURS PULL AVANT DE PUSH
 Créer un repository sur Github puis :
 - git remote add origin git@github.com:SandraLamire-SensingVision/training-git.git
 - git branch -M main
