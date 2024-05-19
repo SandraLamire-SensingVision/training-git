@@ -1,26 +1,40 @@
 INITIALISER
-- git init initialise un dépôt vide en local = crée le dossier .git qui contient les modifs
+- git init initialise un dépôt vide en local = crée le dossier .git qui contient les modifs, affiche :
+        Initialized empty Git repository in C:/Users/sandr/Desktop/training-git/.git/
 
 CONFIGURER
-- git config --global (pour tout le pc) ou git config (pour le projet)
-config nom utilisateur et email : 
-git config --global user.name "S. L."
-git config --global user.email "aaa@aa.fr"
+- git config --global (pour tout le pc) ou git config (pour le projet) des nom utilisateur et email : 
+    git config --global user.name "S. L."
+    git config --global user.email "aaa@aa.fr"
 
 PRENDRE UNE "PHOTO" DU PROJET
 - fichier à mettre dans git = à commiter : git add cmdGit.txt
-- vérification des fichiers à commiter avec git status
+
+- vérification des fichiers à commiter avec git status, affiche :
+        On branch master
+
+        No commits yet
+
+        Changes to be committed:
+          (use "git rm --cached <file>..." to unstage)
+                new file:   cmdGit.txt
+
 - git commit -m (-m pour ajouter un message)
-git commit "Début du projet"
+    git commit "Début du projet" affiche :
+        [master (root-commit) 6d744bd] Début du projet Git
+        1 file changed, 31 insertions(+)
+        create mode 100644 cmdGit.txt
 
 AJOUTER DES MODIFICATIONS
-- après une modif, ajouter la avec 
-git add nomDuFichierModifié ou git add * (pour tout le projet)git 
-puis git commit -m "nomDuCommit"
+- après une modif, ajouter la avec :
+    git add nomDuFichierModifié ou git add * (pour tout le projet)git 
+    puis git commit -m "nomDuCommit"
 
 LISTER LES COMMITS
 - git log affiche la liste des commits avec son identifiant + auteur + date + message
-:q pour ressortir de la liste
+    :q pour ressortir de la liste
+
+
 
 
 
