@@ -1,13 +1,13 @@
-INITIALISER
+# INITIALISER
 - git init initialise un dépôt vide en local = crée le dossier .git qui contient les modifs, affiche :
         Initialized empty Git repository in C:/Users/sandr/Desktop/training-git/.git/
 
-CONFIGURER
+# CONFIGURER
 - git config --global (pour tout le pc) ou git config (pour le projet) des nom utilisateur et email : 
     git config --global user.name "S. L."
     git config --global user.email "aaa@aa.fr"
 
-PRENDRE UNE "PHOTO" DU PROJET
+# PRENDRE UNE "PHOTO" DU PROJET
 - fichier à mettre dans git = à commiter : git add cmdGit.txt
 
 - vérification des fichiers à commiter avec git status, affiche :
@@ -25,7 +25,7 @@ PRENDRE UNE "PHOTO" DU PROJET
         1 file changed, 31 insertions(+)
         create mode 100644 cmdGit.txt
 
-AJOUTER DES MODIFICATIONS
+ AJOUTER DES MODIFICATIONS
 - après une modif, ajouter la avec :
     git add nomDuFichierModifié ou git add * (pour tout le projet)git 
     puis git commit -m "nomDuCommit"
@@ -33,13 +33,68 @@ AJOUTER DES MODIFICATIONS
 LISTER LES COMMITS
 - git log affiche la liste des commits avec son identifiant + auteur + date + message
     :q pour ressortir de la liste
+        commit b917a44b49f72adec111f834cdb7c34ebc0e5052 (HEAD -> master)
+        Author: Sandra Lamiré <slamire@***.com>
+        Date:   Sun May 19 12:18:05 2024 +0200
 
+            Première modification
 
+        commit 6d744bdd17d447adc941a0428ab7eed484c9e30f
+        Author: Sandra Lamiré <slamire@***.com>
+        Date:   Sun May 19 12:15:50 2024 +0200
 
+            Début du projet Git
 
+# REVENIR A UN COMMIT PRECEDENT
+checkout = extraction
+- git checkout identifiantDuCommit : 
+    git log :
+        commit 52d6f6a9eaef48e0f4a9c624da5d239e32731044 (HEAD -> master)
+        Author: Sandra Lamiré <slamire@sensingvision.com>
+        Date:   Sun May 19 12:52:00 2024 +0200
 
+            modification à supprimer
 
+        commit b917a44b49f72adec111f834cdb7c34ebc0e5052
+        Author: Sandra Lamiré <slamire@sensingvision.com>
+        Date:   Sun May 19 12:18:05 2024 +0200
 
+            Première modification
 
+    git checkout b917a44b49f72adec111f834cdb7c34ebc0e5052
+        Note: switching to 'b917a44b49f72adec111f834cdb7c34ebc0e5052'.
+
+        You are in 'detached HEAD' state. You can look around, make experimental
+        changes and commit them, and you can discard any commits you make in this
+        state without impacting any branches by switching back to a branch.     
+
+        If you want to create a new branch to retain commits you create, you may
+        do so (now or later) by using -c with the switch command. Example:      
+
+        git switch -c <new-branch-name>
+
+        Or undo this operation with:
+
+        git switch -
+
+        Turn off this advice by setting config variable advice.detachedHead to false
+
+        HEAD is now at b917a44 Première modification
+    git log :
+        commit b917a44b49f72adec111f834cdb7c34ebc0e5052 (HEAD)
+        Author: Sandra Lamiré <slamire@sensingvision.com>
+        Date:   Sun May 19 12:18:05 2024 +0200
+
+            Première modification
+
+        commit 6d744bdd17d447adc941a0428ab7eed484c9e30f
+        Author: Sandra Lamiré <slamire@sensingvision.com>
+        Date:   Sun May 19 12:15:50 2024 +0200
+
+            Début du projet Git
+
+- on se retoruve en mode HEAD detached at b917a44
+si modifs sur le projets qu'on veux finalement ne pas garder
+git checkout master -f pour extraire la brain main et y revenir sans les dernières modifs locales non commitées
 
 
