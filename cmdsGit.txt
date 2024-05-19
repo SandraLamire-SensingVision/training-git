@@ -212,8 +212,18 @@ Créer un repository sur Github puis :
     branch 'main' set up to track 'origin/main'.
 
 - git pull origin nomDeLaBranche (main ou autre) pour récupérer la version distante sur GitHub
+- git pull = git fetch (récupère la version) puis git merge
+Pour garder la branche test, ne pas "Compare & pull request" sur Github.
+Pour fusionner avec main, valider ce commit dans gitHub en cliquant sur :
+    "Compare & pull request"
+    "Create pull request" 
+    "Resolve conflicts" + "Commit merge"
+    "Merge pull request" + "Confirm merge"
+
+si des fichiers ont été modifiés en local entre temps
 
 - git add/commit + git push -u origin nomDeLaBranche pour pousser les modifs locales dans Github
+
 
 
 
