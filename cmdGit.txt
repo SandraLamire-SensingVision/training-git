@@ -100,28 +100,17 @@ si modifs sur le projets qu'on veux finalement ne pas garder
     git checkout master -f pour extraire la branche main et y revenir sans les dernières modifs locales non commitées
 
 pour conserver les modifications associées au HEAD détaché :
+    git switch -c ma-branche-temporaire pour créer une branche temporaire et s'y placer
+    git branch -D master pour supprimer master => Irréversible!
+    git branch -m master pour renommer la branche temporaire en master
+
+
+RESOLUTION DE MERGE CONFLICT
     git switch -c ma-branche-temporaire pour créer une branche temporaire
     git switch master pour vérifier la branche principale
     git merge ma-branche-temporaire pour fusionnez les modifs depuis la branche temporaire vers la branche principale
     git switch master pour s'y replacer
 
-si conflit :
-    git status
-        On branch master
-        You have unmerged paths.
-        (fix conflicts and run "git commit")
-        (use "git merge --abort" to abort the merge)
-
-        Unmerged paths:
-        (use "git add <file>..." to mark resolution)
-                both modified:   cmdGit.txt
-
-        no changes added to commit (use "git add" and/or "git commit -a")
-
-
-
-
-RESOLUTION DE MERGE CONFLICT
 git checkout --ours cmdGit.txt pour garder la version principale de la branche master
 git checkout --theirs pour conserver la version de la branche temporaire
 puis git add * + git commit -m "résolution conflit"
