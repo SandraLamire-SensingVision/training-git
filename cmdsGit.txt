@@ -52,7 +52,7 @@
             Début du projet Git
 
 
-# REVENIR A UN COMMIT PRECEDENT : GIT CHECKOUT
+# PLACER LE POINTEUR A UN COMMIT PRECEDENT : GIT CHECKOUT
 
 checkout = extraction
 - git checkout identifiantDuCommit : 
@@ -106,6 +106,8 @@ HEAD est un pointeur mobile qui peut pointer vers n’importe quel commit.
 
 si modifs sur le projets qu'on veux finalement ne pas garder
     git checkout master -f pour extraire la branche main et y revenir sans les dernières modifs locales non commitées
+si modifs à garder, créer une branche pour la fusionner plus tard
+	git switch -c nomDeLaBranche
 
 
 # BRANCHES : GIT BRANCH + GIT CHECKOUT
@@ -155,6 +157,38 @@ les commits futurs ne seront que sur cette branche jusqu'à la fusion des branch
  	delete mode 100644 new.txt
 
 - git branch -d dev pour supprimer la branche dev après
+
+
+# RESOLUTION DE CONFLIT
+
+- git branch futurConflit
+	faire un add+commit sur branche master
+- git checkout futurConflit
+	faire un add+commit sur branche futurConflit
+- git checkout master + git merge futurConflit pour enregistrer les modifs de futurConflit dans master :
+	Auto-merging cmdsGit.txt
+	CONFLICT (content): Merge conflict in cmdsGit.txt
+	Automatic merge failed; fix conflicts and then commit the result.
+
+supprimer manuellement ou dans merge editor tout ce qu'on ne veut pas + git add/commit
+- git log
+
+
+# SUPPRIMER LES MODIFS COMMITEES OU NON
+
+- git reset --hard HEAD supprime les modifs non commitées : retour au dernier commit
+
+- git revert identifiantDuCommit pour retourner à un commit précis + résolver les conflits si besoin 
+- git commit --abort si choix de conserver le code qui existait déjà dans le commit le plus récent : 
+	error: could not revert cc87665... Modif en conflit
+	hint: After resolving the conflicts, mark them with
+	hint: "git add/rm <pathspec>", then run
+	hint: "git revert --continue".
+	hint: You can instead skip this commit with "git revert --skip".
+	hint: To abort and get back to the state before "git revert",
+	hint: run "git revert --abort".
+- git add/commit
+
 
 
 
