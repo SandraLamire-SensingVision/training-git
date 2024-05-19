@@ -157,6 +157,10 @@ les commits futurs ne seront que sur cette branche jusqu'à la fusion des branch
 - git branch -d dev pour supprimer la branche dev après
 
 
+# RESOLUTION DE CONFLIT
+
+
+
 
 
 
