@@ -112,6 +112,7 @@ si modifs à garder, créer une branche pour la fusionner plus tard
 
 # BRANCHES : GIT BRANCH + GIT CHECKOUT
 
+ATTENTION A TOUJOURS VERIFIER SUR QUELLE BRANCHE ON EST AVANT TOUT!
 - git branch pour liste des branches
 - git branch dev pour créer une branche dev
 - git branch -m nomDeLaBranche pour renommer la branche sur laquelle on est
@@ -192,10 +193,27 @@ supprimer manuellement ou dans merge editor tout ce qu'on ne veut pas + git add/
 
 
 # GITHUB : GIT PUSH + GIT PULL
+
 Créer un repository sur Github puis :
 - git remote add origin git@github.com:SandraLamire-SensingVision/training-git.git
 - git branch -M main
-- git push -u origin main
+- git push -u origin main :
+    Enumerating objects: 50, done.
+    Counting objects: 100% (50/50), done.
+    Delta compression using up to 24 threads
+    Compressing objects: 100% (44/44), done.
+    Writing objects: 100% (50/50), 7.89 KiB | 3.95 MiB/s, done.
+    Total 50 (delta 17), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (17/17), done.
+    To github.com:SandraLamire-SensingVision/training-git.git
+    * [new branch]      main -> main
+    branch 'main' set up to track 'origin/main'.
+
+- git pull origin nomDeLaBranche (main ou autre) pour récupérer la version distante sur GitHub
+- git add/commit + git push nomDeLaBranche pour pousser les modifs locales dans Github
+
+
+
 
 
 
